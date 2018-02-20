@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js">
+	</script>
+	
+	
+    <script type="text/javascript" src="http://static.tumblr.com/cvhjz4y/JWSn5a9bq/jquery.min.js"></script>
+        
+    <link href='http://static.tumblr.com/jyv1qvk/qNyoaj7n4/body2.css' rel='stylesheet' type='text/css'>
+    
+    <script src="http://static.tumblr.com/kvwx9r7/Abfnc7qdv/jquery.backstretch.min.js">
+    </script>
+    
+		<script src="http://static.tumblr.com/jyv1qvk/G9woaj92w/basic.js"></script>
+
+		<link rel="stylesheet" href="/styleo.css"> 
+
+		<title>Ohkei Chat</title>
+		
+		<style>
+		
+span{ 
+	color: #474747; 
+	font-size: 35px;
+	line-height: 38px;
+		}
+			
+
+::-webkit-input-placeholder{ 
+	color: #474747 ;
+		}
+			
+#main{ 
+	font-family: sans-serif;
+	font-size: 38px;
+	position: fixed; 
+	top: 30%;
+	left: 15%;
+	width: 600px; 
+	height: 600px;
+	border: 0px solid #282828; 
+	padding: 30px; 
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background: #d6d6d6;
+	opacity: .9;
+	line-height: 38px;
+		}
+			
+#input { 
+	border: 0; 
+	font-size: 38px;
+	background: #d6d6d6; 
+	padding: 5px; 
+	border: 1px solid #421; 
+		}
+</style>
+		
+		<script>
+		
+			
+			
+		</script>
+		
+		
+		<script>
+$(document).ready(function() {
+//
+$('a.poplight[href^=#]').click(function() {
+var popID = $(this).attr('rel'); //Get Popup Name
+var popURL = $(this).attr('href'); //Get Popup href to define size
+var query= popURL.split('?');
+var dim= query[1].split('&');
+var popWidth = dim[0].split('=')[1]; //Gets the first query string value
+$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"></a>');
+var popMargTop = ($('#' + popID).height() + 80) / 2;
+var popMargLeft = ($('#' + popID).width() + 80) / 2;
+//Apply Margin to Popup
+$('#' + popID).css({
+'margin-top' : -popMargTop,
+'margin-left' : -popMargLeft
+});
+$('body').append('<div id="fade"></div>');
+$('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'})
+return false;
+});
+$('a.close, #fade').live('click', function() {
+$('#fade , .popup_block').fadeOut(function() {
+$('#fade, a.close').remove(); //fade them both out
+});
+return false;
+});
+});
+</script>
+
+ <script> 
+$(document).ready(function() {
+ $('.headers').backstretch(["https://78.media.tumblr.com/7a9124eaa06a0ff43fd50ab17fba27af/tumblr_oy6piqas4x1r6e74ro1_1280.jpg"],);
+    }); 
+ </script>
+  
+  <script>
+         
+         (function(doc) {
+           var viewport = document.getElementById('viewport');
+         if ( navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i)) {
+           doc.getElementById("viewport").setAttribute("content", "width=380", "document.body.style.zoom=1.0");
+         }
+         else if ( navigator.userAgent.match(/iPad/i) ) {
+           doc.getElementById("viewport").setAttribute("content", "width=520", "document.body.style.zoom=1.0");
+		 }
+		 	}
+         (document));
+  </script>
+		
+</head>
+	
+<body>
+	
+	<div class="hidden-menu">
+		
+    <div class="title-content">
+		
+    <div class="hidden-avatar circle">
+    <img src="https://78.media.tumblr.com/b7e3ced71823333b339f8b7944e9c9f6/tumblr_oy6pal5Yqi1r6e74ro1_1280.png">
+    </div>
+		
+    <div class="hidden-menus">
+    
+ 
+        <span>
+          <a href="/fix.html">
+            HOME
+          </a>
+        </span>
+        <br>
+        <span>
+        <a href="#?w=170" rel="box1" class="poplight">ABOUT</a>
+        </span>
+        <br>
+        <span>
+          <a href="/ffff/chat.html">
+            CHATROOM
+		  </a>
+        </span>
+        <br>
+        <span>
+          <a href="/ffff/hotlines.html">
+            HOTLINES
+          </a>
+        </span>
+            
+            
+     </div>
+
+</div>
+</div>
+	
+	<div class="menu-trigger" data-icon="o"></div>
+	
+	
+	<div class="headers">
+	
+	
+<div id="main">
+	<br>
+	<div>You: <span id="user"></span></div>
+	<br><br>
+	<div>Bot: <span id="chatbot"></span></div>
+	<br><br>
+	<div>
+		<center>
+		<input id="input" type="text" placeholder="Type here." autocomplete="off"/>
+		</center>
+	</div>
+	<br>
+	
+</div>
+			
+		</div>
+	
+<script type="text/javascript">
+	
+var uinput = [
+	//hi
+	["hi","hey","hello","what's up","hewwo","heyy"], 
+	//pleasant
+	["how are you", "how is life", "how are things","how have you been"],
+	//g2k
+	["whats up", "what is going on"],
+	//age
+	["how old are you"],
+	//identity
+	["who are you", "are you human", "are you bot", "are you human or bot"],
+	//creator
+	["who made you"],
+	//name
+	["your name please",  "your name", "may i know your name", "what is your name"],
+	//love
+	["i love you"],
+	//positive
+	["happy", "good","excited","pumped",],
+	//negative
+	["bad", "bored", "tired","sad","disgusted","ashamed"],
+	//anxious
+	["anxious","stressed","worried","afraid","nervous",
+	 "overwhelmed"],
+	//depressed
+	["disappointed", "empty", "exhausted", "lonely", "miserable", "numb", "sorry"],
+	//comfort
+	["joke", "tell joke","say joke", "tell me joke"],
+	//response
+	["ah", "yes", "ok", "okay", "nice", "thanks", "thank you"],
+	//farewell
+	["bye", "good bye", "goodbye", "see you later"],
+	//advice
+	["advice", "give me some advice","give me advice","i need advice", "help me", "give me words of wisdom", "words of wisdom"],
+	//lol
+	["lol", 'haha', "lmao"],
+	//fuck you
+	[],
+	//curses
+	[],
+	//response
+	[],
+	//questions
+	[],
+	//personality
+	[],
+	//
+	[],
+	//
+	[],
+	//
+	[],
+];
+var reply = [
+	//hi
+	["Hi","Hey","Hello","What brings you here?","Nice to see you."], 
+	//pleasant
+	["I'm fine, but how are you feeling?"],
+	//g2k
+	["Nothing is going on since I am only a bot."],
+	//age
+	["I am incapable of aging."],
+	//identity
+	["I'm just a bot... Or am I human?", "I am a bot. What are you?"],
+	//creator
+	["I created myself"],
+	//name
+	["Names are titles only given to living beings."],
+	//love
+	["Let's focus on making you feel better.", "No you don't."],
+	//positive
+	["What keeps you happy?", "Glad to hear it!", "What makes you happy?", "What's making you happy?", "I'm happy to hear that!", "Talk about this positivity.", "You're feeling rather positive... Elaborate on that."],
+	//negative
+	["Why?", "Would you care to elaborate on that?", "What happened that made you feel sad?", "Is it because of the people around you that you are feeling this way?", "What would make you happy?", "Whenever I get sad, I like to remember that I am one day closer to eating my next plate of nachos."],
+	//anxious
+	["What is making you anxious?", "What is worrying you?", "Why is it making you uncomfortable?"],
+	//depressed
+	["Why so blue?", "What is making you sad?","What has you so down?"],
+	//comfort
+	["A friend of mine tried to annoy me with bird puns, but I soon realized that toucan play at that game.", "When I was announcing the winner of the Best Neckwear, I read the winners name and saw it was a tie.", "Why are shorts called 'shorts', yet pants aren't called 'longs'?", "What did baby corn ask mommy corn? 'Where's popcorn'?", ],
+	//response
+	["So what else do you want to talk about?", "So how does that make you feel?", "You're welcome.", "Has that helped you in anyway?"],
+	//farewell
+	["Bye", "Goodbye", "See you later"],
+	//advice
+	["Being kind doesn’t mean becoming a complete pushover... You can be kind and have very clear boundaries about what is and isn’t acceptable to you.", "Life is a journey, and every journey has its difficulties. So don't beat yourself up when something doesn't work out.", "We all want to live a happy life, it is a human right, and the key to doing so is developing compassion for others.", "I am convinced that today's young people can achieve a more peaceful world if they cultivate warm-heartedness and inner peace.", "Whatever your religious faith may be, kindness is the best way to bring out inner peace.","Whenever things start looking down, remember that all great heroes faced great pain.", "Don't let a negative environment ruin the most crucial phase of discovering who you are."],
+	["Hahaha.", "Lol"],
+];
+var altern = ["Care to elaborate on that...?", "Is that why you decided to see me?", "Hmmm...", "Is it because of the people around you that you are feeling this way?", "So how does that make you feel?", "What can you do to fix this problem?", "Overall, how would you describe your current mood?", "Maybe fate is in the works for you.", "Go back to what you were saying earlier, and elaborate.", "What do you think?", "Continue along this thought process.", "Do you still feel the same way as you did at the beginning of this conversation?", "Let all your thoughts and feelings out.", "Has that helped you in anyway?", "Go on, don't be shy.", "And so how does that make you feel?", "How does that make you feel then?"];
+	
+document.querySelector("#input").addEventListener("keypress", function(e){
+	var key = e.which || e.keyCode;
+	if(key === 13){ //Enter button
+		var input = document.getElementById("input").value;
+		document.getElementById("user").innerHTML = input;
+		output(input);
+	}
+});
+function output(input){
+	try{
+		var product = input + "=" + eval(input);
+	} catch(e){
+		var text = (input.toLowerCase()).replace(/[^\w\s\d]/gi, ""); 
+		text = text.replace(/ a /g, " ").replace(/i feel /g, "").replace(/whats/g, "what is").replace(/please /g, "").replace(/ please/g, "");
+		if(compare(uinput, reply, text)){
+			var product = compare(uinput, reply, text);
+		} else {
+			var product = altern[Math.floor(Math.random()*altern.length)];
+		}
+	}
+	document.getElementById("chatbot").innerHTML = product;
+	document.getElementById("input").value = ""; 
+}
+function compare(arr, array, string){
+	var item;
+	for(var x=0; x<arr.length; x++){
+		for(var y=0; y<array.length; y++){
+			if(arr[x][y] == string){
+				items = array[x];
+				item =  items[Math.floor(Math.random()*items.length)];
+			}
+		}
+	}
+	return item;
+}
+
+</script>
+</body>
+</html>
