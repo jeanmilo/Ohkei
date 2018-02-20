@@ -1,0 +1,162 @@
+     <!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" id="ind" class=" infinite not-resize not-mobile">
+<head>
+	
+	<link rel="stylesheet" href="styleo.css">
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js">
+	</script>
+	
+	<meta name="viewport" id="viewport" content="user-scalable=0;initial-scale=1.0, maximum-scale=1.0">
+	
+    <script type="text/javascript" src="http://static.tumblr.com/cvhjz4y/JWSn5a9bq/jquery.min.js"></script>
+        
+    <link href='http://static.tumblr.com/jyv1qvk/qNyoaj7n4/body2.css' rel='stylesheet' type='text/css'>
+    
+    <script src="http://static.tumblr.com/kvwx9r7/Abfnc7qdv/jquery.backstretch.min.js">
+    </script>
+    
+    <script src="http://static.tumblr.com/jyv1qvk/G9woaj92w/basic.js"></script>
+
+
+<script>
+$(document).ready(function() {
+//
+$('a.poplight[href^=#]').click(function() {
+var popID = $(this).attr('rel'); //Get Popup Name
+var popURL = $(this).attr('href'); //Get Popup href to define size
+var query= popURL.split('?');
+var dim= query[1].split('&');
+var popWidth = dim[0].split('=')[1]; //Gets the first query string value
+$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"></a>');
+var popMargTop = ($('#' + popID).height() + 80) / 2;
+var popMargLeft = ($('#' + popID).width() + 80) / 2;
+//Apply Margin to Popup
+$('#' + popID).css({
+'margin-top' : -popMargTop,
+'margin-left' : -popMargLeft
+});
+$('body').append('<div id="fade"></div>');
+$('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'})
+return false;
+});
+$('a.close, #fade').live('click', function() {
+$('#fade , .popup_block').fadeOut(function() {
+$('#fade, a.close').remove(); //fade them both out
+});
+return false;
+});
+});
+</script>
+
+ <script> 
+$(document).ready(function() {
+ $('.headers').backstretch(["https://78.media.tumblr.com/7a9124eaa06a0ff43fd50ab17fba27af/tumblr_oy6piqas4x1r6e74ro1_1280.jpg"],);
+    }); 
+ </script>
+  
+  <script>
+         
+         (function(doc) {
+           var viewport = document.getElementById('viewport');
+         if ( navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i)) {
+           doc.getElementById("viewport").setAttribute("content", "width=380", "document.body.style.zoom=1.0");
+         }
+         else if ( navigator.userAgent.match(/iPad/i) ) {
+           doc.getElementById("viewport").setAttribute("content", "width=520", "document.body.style.zoom=1.0");
+		 }
+		 	}
+         (document));
+  </script> 
+	
+</head>
+	
+<body>
+	
+	
+	<div class="hidden-menu">
+		
+    <div class="title-content">
+		
+    <div class="hidden-avatar circle">
+    <img src="https://78.media.tumblr.com/b7e3ced71823333b339f8b7944e9c9f6/tumblr_oy6pal5Yqi1r6e74ro1_1280.png">
+    </div>
+		
+    <div class="hidden-menus">
+    
+ 
+        <span>
+          <a href="/fix.html">
+            HOME
+          </a>
+        </span>
+        <br>
+        <span>
+        <a href="#?w=170" rel="box1" class="poplight">ABOUT</a>
+        </span>
+        <br>
+        <span>
+          <a href="/ffff/chat.html">
+            CHATROOM
+		  </a>
+        </span>
+        <br>
+        <span>
+          <a href="/ffff/hotlines.html">
+            HOTLINES
+          </a>
+        </span>
+            
+            
+     </div>
+
+</div>
+</div>
+
+<div class="menu-trigger" data-icon="o"></div>
+	
+	
+	<div class="headers">
+		
+		<div class="hot-block">
+			
+		<div class="hot-title">
+			
+		<h1>Hotlines</h1>
+			
+		</div>
+			
+		<ul>	
+		<li><a href="tel:1-800-784-2433">
+			Suicide Hotline
+			</a> </li>
+		<li><a href="tel:1-800-999-9999">
+			Suicide Crisis Line
+			</a></li>
+		<li><a href="tel:1-800-273-8245">
+			National Suicide Prevention Helpline
+			</a></li>
+		<li><a href="tel:1-800-621-4000">
+			National Adolescent Suicide Helpline
+			</a></li>
+		<li><a href="tel:1-800-233-4357">
+			Crisis Helpline
+			</a></li>
+			
+		</ul>
+			
+		</div>
+	</div>
+	
+</body>
+	
+	<center>
+	<div id="box1" class="popup_block">
+Ohkei is a therapudic chatbot made to help you vent any emotions too heavy to keep to yourself.
+	<br><br><br>
+<a href="/ffff/chat.html">Click here to begin.</a>
+</div>
+	</center>
+	
+</html>
